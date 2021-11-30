@@ -1,0 +1,26 @@
+#+title: Readme
+#+author: Ellis Kenyő
+#+date: 2021-11-30
+#+latex_class: chameleon
+
+Simple [[https://github.com/seagle0128/doom-modeline][doom-modeline]] segment to display information about the current EXWM workspace layout, including workspaces which have X windows on and which are marked as "urgent" by a client.
+
+[[file:.github/demo.png]]
+
+In the above example, workspace 1 is the current workspace, 2-4 are inactive workspaces that have X windows associated with them and 5 is a fully inactive workspace. Due to the usage of built-in exwm functions, there should be no issue with the amount of workspaces; although there's no built-in space limit so one should bear that in mind for say more than 5 or so workspaces.
+
+* Install
+** Manual
+Add after =doom-modeline= in your load path, and add to your config from [[*Usage]]
+
+** MELPA
+Coming Soon®
+
+* Usage
+Simply adjust your modeline config(s) to include the segment, an example is listed below
+
+#+begin_src emacs-lisp
+(doom-modeline-def-modeline 'main
+    '(bar workspace-name exwm-workspaces modals matches buffer-info remote-host parrot selection-info)
+    '(now-playing objed-state misc-info persp-name grip mu4e gnus github debug repl lsp minor-modes major-mode process vcs checker))
+#+end_src
