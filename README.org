@@ -11,7 +11,7 @@ In the above example, workspace 1 is the current workspace, 2-4 are inactive wor
 
 * Install
 ** Manual
-Add after =doom-modeline= in your load path, and add to your config from [[*Usage]]
+Add after =doom-modeline= in your load path, and add to your config from "Usage"
 
 ** MELPA
 Coming Soon®
